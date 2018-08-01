@@ -14,9 +14,12 @@ document.getElementById("signupform").addEventListener("submit", function(e) {
   api
     .post("/user/signup", data)
     .then(res => res.json())
-    .then(data => console.log(data));
-  localStorage.setItem("success", data.message);
-  if (data.message === "Successfully registered") {
-    window.location.href = "./signin.html";
-  }
+    .then(res => {
+      console.log(res);
+      alert(res.message);
+      if (res.message === "Successfully registered") {
+        localStorage.setItem("success", res.message);
+        window.location.href = "./login.html";
+      }
+    });
 });

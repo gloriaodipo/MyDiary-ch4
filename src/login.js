@@ -12,9 +12,12 @@ document.getElementById("loginform").addEventListener("submit", function(e) {
   api
     .post("/user/login", data)
     .then(res => res.json())
-    .then(data => console.log(data));
-  localStorage.setItem("success", data.message);
-  if (data.message === "You are successfully logged in") {
-    window.location.href = "./addentry.html";
-  }
+    .then(res => {
+      console.log(res);
+      alert(res.message);
+      if (res.token) {
+        localStorage.setItem("token", res.token);
+        window.location.href = "./addentry.html";
+      }
+    });
 });

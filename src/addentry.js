@@ -15,8 +15,6 @@ document.getElementById("addentryform").addEventListener("submit", function(e) {
     .then(res => {
       console.log(res);
       alert(res.message);
-      if (res.token) {
-        localStorage.setItem("success", res.message);
-      }
-    });
+    })
+    .catch(err => console.error(err));
 });

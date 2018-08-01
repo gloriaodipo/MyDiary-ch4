@@ -15,6 +15,7 @@ document.getElementById("addentryform").addEventListener("submit", function(e) {
     .then(res => {
       console.log(res);
       alert(res.message);
+      window.location.href = "./getEntries.html";
     })
     .catch(err => console.error(err));
 });

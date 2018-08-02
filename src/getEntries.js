@@ -2,7 +2,7 @@ import api from "./api";
 
 const token = localStorage.getItem("token");
 api
-  .post("/user/entries", token)
+  .get("/user/entries", token)
   .then(res => res.json())
   .then(res => {
     console.log(res);

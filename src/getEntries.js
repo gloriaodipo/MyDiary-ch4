@@ -10,20 +10,15 @@ api
     for (let i in entries) {
       if (entries.hasOwnProperty(i)) {
         let entry = entries[i];
-        console.log(entry);
+        console.log(entry.title);
         document.getElementById("posts").innerHTML += `<div>
-        <h4><i>${entry.title}</i></h4>
+        <h3><button onClick="getSingle(event)" data-id="${entry.id}">${
+          entry.title
+        }</button></h3>
         <p>${entry.description}</p>
         </div><hr/>`;
       }
     }
-    // for (i = 0; i < data.length; i++) {
-    //   console.log(data.length);
-    //   document.getElementById("posts").innerHTML += `<div>
-    //   <h4><i>${data[i].title}</i></h4>
-    //   <p>${data[i].description}</p>
-    //   </div><hr/>`;
-    // }
   })
   .catch(error => {
     console.log(error);

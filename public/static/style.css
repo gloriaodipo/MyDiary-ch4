@@ -117,12 +117,9 @@ form {
   background-image: url("../img/img8.png");
 }
 #addentryform {
-  width: 50%;
-  top: 30%;
-  left: 40%;
-  margin-right: 10px;
-  margin-top: -10px;
-  margin-bottom: 15%;
+  margin: 20px;
+  padding-bottom: 5px;
+  border: 0px;
 }
 
 /*TABLE*/

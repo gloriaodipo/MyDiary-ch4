@@ -5,7 +5,9 @@ module.exports = {
   entry: {
     signup: "./src/signup.js",
     login: "./src/login.js",
-    addentry: "./src/addentry.js"
+    addentry: "./src/addentry.js",
+    getEntries: "./src/getEntries.js",
+    singleEntry: "./src/singleEntry.js"
   },
   output: {
     path: path.resolve(__dirname, "public/dist"),

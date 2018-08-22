@@ -7,14 +7,22 @@ document.getElementById("addentryform").addEventListener("submit", function(e) {
     title: document.getElementById("title").value,
     description: document.getElementById("description").value
   };
-  console.log(data);
   const token = localStorage.getItem("token");
   api
     .post("/user/entries", data, token)
     .then(res => res.json())
-    .then(res => {
-      console.log(res);
-      alert(res.message);
-    })
-    .catch(err => console.error(err));
+    .then(data => {
+      console.log(data.message);
+      if (data.message === "Entry has been published") {
+        let msg = data.message;
+        document.getElementById("addentryform").innerHTML = msg;
+        window.location.href = "./getEntries.html";
+      } else {
+        let msg = Object.values(data);
+        document.getElementById("addentryform").innerHTML = msg;
+      }
+    });
 });
+// .catch(error => {
+//     console.log(error);
+//   };

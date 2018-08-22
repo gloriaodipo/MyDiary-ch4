@@ -17,7 +17,7 @@ document.getElementById("loginform").addEventListener("submit", function(e) {
       alert(res.message);
       if (res.token) {
         localStorage.setItem("token", res.token);
-        window.location.href = "./addentry.html";
+        window.location.href = "./getEntries.html";
       }
     });
 });

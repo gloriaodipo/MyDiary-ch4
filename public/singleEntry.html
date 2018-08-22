@@ -39,12 +39,16 @@
       <div>Last Modified at:
         <input id="modifiedat" readonly/>
       </div>
-      <label>Title</label>
-      <input id="title" />
-      <label>Description</label>
-      <textarea id="description"></textarea>
-      <input type="button" value="Edit" />
-      <input type="button" value="Delete" />
+      <label for="title">Title:
+        <input class="single" type="text" id="title">
+      </label>
+
+      <label for="description">Description:
+        <textarea id="description"></textarea>
+      </label>
+
+      <input type="button" value="Edit" id="edit" />
+      <input type="button" value="Delete" id="delete" />
     </form>
   </div>
   <script src=" ./dist/singleEntry.bundle.js "></script>

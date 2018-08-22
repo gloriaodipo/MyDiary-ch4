@@ -185,3 +185,19 @@ textarea {
   padding: 20px;
   width: 50%;
 }
+
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+
+.alert {
+  background-color: yellowgreen;
+  font-size: large;
+  border-radius: 15px;
+  padding: 20px;
+  width: 70%;
+  height: 5%;
+}

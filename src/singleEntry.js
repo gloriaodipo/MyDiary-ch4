@@ -1,5 +1,6 @@
 import api from "./api";
 
+document.getElementsByClassName("alert")[0].style.visibility = "hidden";
 const token = localStorage.getItem("token");
 const entry_id = sessionStorage.getItem("entryid");
 
@@ -29,7 +30,25 @@ document.getElementById("edit").addEventListener("click", function(e) {
     .then(res => res.json())
     .catch(e => console.error(e))
     .then(res => {
-      document.getElementsByClassName("alert")[0].innerHTML = res.message;
+      let alertbox = document.getElementsByClassName("alert")[0];
+      alertbox.innerHTML = res.message;
+      alertbox.style.visibility = "visible";
       console.log(res);
+    });
+});
+
+document.getElementById("delete").addEventListener("click", function(e) {
+  e.preventDefault();
+  let url = `/user/entries/${entry_id}`;
+  api
+    .delete(url, token)
+    .then(res => res.json())
+    .catch(e => console.error(e))
+    .then(res => {
+      let alertbox = document.getElementsByClassName("alert")[0];
+      alertbox.innerHTML = res.message;
+      alertbox.style.visibility = "visible";
+      console.log(res);
+      window.location.href = "/getEntries.html";
     });
 });

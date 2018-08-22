@@ -12,10 +12,9 @@ api
         let entry = entries[i];
         console.log(entry.title);
         document.getElementById("posts").innerHTML += `<div>
-        <h3><button onClick="getSingle(event)" data-id="${entry.id}">${
-          entry.title
-        }</button></h3>
-        <p>${entry.description}</p>
+        <button class="titles" onClick="getSingle(event)" data-id="${entry.id}">
+        <h3>${entry.title}</h3>
+        </button>
         </div><hr/>`;
       }
     }

@@ -7,6 +7,8 @@ document.getElementById("addentryform").addEventListener("submit", function(e) {
     title: document.getElementById("title").value,
     description: document.getElementById("description").value
   };
+  console.log(data);
+
   const token = localStorage.getItem("token");
   api
     .post("/user/entries", data, token)

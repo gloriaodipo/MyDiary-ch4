@@ -121,6 +121,10 @@ form {
   margin: 20px;
   padding-bottom: 5px;
   border: 0px;
+  color: white;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: larger;
 }
 input#title[type="text"] {
   width: 40%;
@@ -137,9 +141,14 @@ button.titles {
   text-align: left;
   border-radius: 10px;
 }
-
 button.titles:hover {
   background-color: rgb(36, 33, 37);
+  cursor: pointer;
+}
+button {
+  border-radius: 5px;
+}
+button:hover {
   cursor: pointer;
 }
 /*FOOTER*/
@@ -210,6 +219,7 @@ textarea {
 
 .right {
   text-align: right;
+  float: right;
 }
 .left {
   text-align: left;

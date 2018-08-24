@@ -154,6 +154,7 @@ button.titles:hover {
 }
 .view {
   background-image: url("../img/img8.png");
+  padding-bottom: 40px;
 }
 .vw h2 {
   font-style: italic;

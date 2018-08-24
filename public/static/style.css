@@ -237,3 +237,6 @@ textarea {
   margin: auto;
   width: 50%;
 }
+#delete {
+  background-color: red;
+}

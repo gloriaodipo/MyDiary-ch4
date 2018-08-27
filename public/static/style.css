@@ -233,6 +233,14 @@ textarea {
   width: 70%;
 }
 
+.alert-danger {
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  color: white;
+}
+
 #posts {
   margin: auto;
   width: 50%;

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --watch & live-server public/",
     "watch": "webpack --watch",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "heroku-postbuild": "webpack -p"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

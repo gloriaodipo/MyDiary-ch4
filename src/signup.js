@@ -21,7 +21,7 @@ document.getElementById("signupform").addEventListener("submit", function(e) {
       .then(res => {
         console.log(res);
         if (res.message === "Successfully registered") {
-          window.location.href = "./login.html";
+          window.location.href = "./getEntries.html";
         } else {
           let alertbox = document.getElementsByClassName("alert-danger")[0];
           alertbox.innerHTML = res.message;

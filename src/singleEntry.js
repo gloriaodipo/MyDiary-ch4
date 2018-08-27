@@ -1,4 +1,5 @@
 import api from "./api";
+import swal from "sweetalert";
 
 document.getElementsByClassName("alert")[0].style.visibility = "hidden";
 const token = localStorage.getItem("token");
@@ -40,15 +41,27 @@ document.getElementById("edit").addEventListener("click", function(e) {
 document.getElementById("delete").addEventListener("click", function(e) {
   e.preventDefault();
   let url = `/user/entries/${entry_id}`;
-  api
-    .delete(url, token)
-    .then(res => res.json())
-    .catch(e => console.error(e))
-    .then(res => {
-      let alertbox = document.getElementsByClassName("alert")[0];
-      alertbox.innerHTML = res.message;
-      alertbox.style.visibility = "visible";
-      console.log(res);
-      window.location.href = "/getEntries.html";
-    });
+  swal({
+    title: "Are you sure you want to delete?",
+    text: "Once deleted, you will not be able to recover this entry!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true
+  }).then(willDelete => {
+    if (willDelete) {
+      api
+        .delete(url, token)
+        .then(res => res.json())
+        .catch(e => console.error(e))
+        .then(res => {
+          swal("Poof! Your entry has been deleted!", {
+            icon: "success"
+          });
+          console.log(res);
+          window.location.href = "/getEntries.html";
+        });
+    } else {
+      swal("Your entry is safe!");
+    }
+  });
 });

@@ -30,7 +30,7 @@ document.getElementById("signupform").addEventListener("submit", function(e) {
       });
   } else {
     let alertbox = document.getElementsByClassName("alert-danger")[0];
-    let message = "Ensure password match";
+    let message = "Ensure passwords match";
     alertbox.innerHTML = message;
     alertbox.style.visibility = "visible";
   }

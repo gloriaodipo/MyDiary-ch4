@@ -1,5 +1,6 @@
 import api from "./api";
 
+document.getElementsByClassName("alert-danger")[0].style.visibility = "hidden";
 document.getElementById("signupform").addEventListener("submit", function(e) {
   e.preventDefault();
   let password = document.getElementById("password").value;
@@ -19,15 +20,18 @@ document.getElementById("signupform").addEventListener("submit", function(e) {
       .then(res => res.json())
       .then(res => {
         console.log(res);
-        alert(res.message);
         if (res.message === "Successfully registered") {
-          localStorage.setItem("success", res.message);
           window.location.href = "./login.html";
+        } else {
+          let alertbox = document.getElementsByClassName("alert-danger")[0];
+          alertbox.innerHTML = res.message;
+          alertbox.style.visibility = "visible";
         }
       });
   } else {
-    console.log(data);
-
-    alert("Ensure passwords match");
+    let alertbox = document.getElementsByClassName("alert-danger")[0];
+    let message = "Ensure password match";
+    alertbox.innerHTML = message;
+    alertbox.style.visibility = "visible";
   }
 });

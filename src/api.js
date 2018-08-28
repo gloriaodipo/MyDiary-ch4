@@ -1,6 +1,6 @@
 class Api {
   constructor() {
-    this.baseUrl = "http://127.0.0.1:5000/api/v1";
+    this.baseUrl = "https://mydiary-v2-app.herokuapp.com/api/v1";
   }
 
   get(endpoint, token) {

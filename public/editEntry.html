@@ -7,16 +7,6 @@
   <title>Single Entry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="static/style.css" />
-
-  <script>
-    function getSingle(event) {
-      event.preventDefault();
-      let id = event.currentTarget.dataset.id
-      sessionStorage.setItem('entryid', id)
-      window.location.replace('editEntry.html')
-    }
-  </script>
-
 </head>
 
 <body class="view">
@@ -46,19 +36,11 @@
     <a href="getEntries.html" class="left">
       <i class="fa fa-arrow-left"></i> Back
     </a>
-    <!-- <form>
+    <form>
       <div>
         <h2 class="left">Entry Description</h2>
       </div>
 
-      <div>
-        <span class="right">Created at:
-          <input id="createdat" readonly/>
-        </span>
-        <span class="left">Last Modified at:
-          <input id="modifiedat" readonly/>
-        </span>
-      </div>
       <label for="title">Title:
         <input class="single" type="text" id="title">
       </label>
@@ -69,35 +51,13 @@
 
       <input type="button" value="Edit" id="edit" />
       <input type="button" value="Delete" id="delete" />
-    </form> -->
-    <div>
-      <div>
-        <h2 class="left">Entry Description</h2>
-      </div>
-
-      <div>
-        <span class="right">Created at:
-          <p id="createdat"></p>
-        </span>
-        <span class="left">Last Modified at:
-          <p id="modifiedat"></p>
-        </span>
-      </div>
-      <label for="title">Title:
-        <div id="title"></div>
-      </label>
-      <br/>
-      <label for="description">Description:</label>
-      <div id="description"></div>
-
-      <input type="button" value="Edit" onClick="getSingle(event)" data-id="${entry.id}" />
-      <input type="button" value="Delete" id="delete" />
-    </div>
+    </form>
 
   </div>
   <div class="footer">
     <h5>Created by Gloria ©2018 All Rights Reserved</h5>
   </div>
+  <script src=" ./dist/editEntry.bundle.js "></script>
   <script src=" ./dist/singleEntry.bundle.js "></script>
 </body>
 

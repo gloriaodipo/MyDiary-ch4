@@ -13,30 +13,18 @@ api
   .then(res => res.json())
   .catch(e => console.error(e))
   .then(res => {
-    console.log(res);
-    document.getElementById("createdat").value = res.entry.created_at;
-    document.getElementById("modifiedat").value = res.entry.last_modified;
-    document.getElementById("title").value = res.entry.title;
-    document.getElementById("description").value = res.entry.description;
-  });
-
-document.getElementById("edit").addEventListener("click", function(e) {
-  e.preventDefault();
-  let title = document.getElementById("title").value;
-  let description = document.getElementById("description").value;
-  let url = `/user/entries/${entry_id}`;
-  let data = { title: title, description: description };
-  api
-    .update(url, token, (data = data))
-    .then(res => res.json())
-    .catch(e => console.error(e))
-    .then(res => {
-      let alertbox = document.getElementsByClassName("alert")[0];
-      alertbox.innerHTML = res.message;
-      alertbox.style.visibility = "visible";
+    if (window.location.href === "./editEntry.html") {
+      document.getElementById("title").innerHTML = res.entry.title;
+      document.getElementById("description").innerHTML = res.entry.description;
+    } else {
       console.log(res);
-    });
-});
+      document.getElementById("createdat").innerHTML += res.entry.created_at;
+      document.getElementById("modifiedat").innerHTML +=
+        res.entry.last_modified;
+      document.getElementById("title").innerHTML += res.entry.title;
+      document.getElementById("description").innerHTML += res.entry.description;
+    }
+  });
 
 document.getElementById("delete").addEventListener("click", function(e) {
   e.preventDefault();

@@ -8,7 +8,8 @@ module.exports = {
     addentry: "./src/addentry.js",
     getEntries: "./src/getEntries.js",
     singleEntry: "./src/singleEntry.js",
-    logout: "./src/logout.js"
+    logout: "./src/logout.js",
+    editEntry: "./src/editEntry"
   },
   output: {
     path: path.resolve(__dirname, "public/dist"),

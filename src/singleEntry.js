@@ -58,7 +58,7 @@ document.getElementById("delete").addEventListener("click", function(e) {
             icon: "success"
           });
           console.log(res);
-          history.go(-1);
+          window.location.href = "public/getentries.html";
         });
     } else {
       swal("Your entry is safe!");

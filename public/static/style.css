@@ -94,7 +94,7 @@ button {
 .form {
   background-color: white;
   position: absolute;
-  height: 500px;
+  height: 550px;
   width: 500px;
   top: 30%;
   left: 40%;
@@ -244,4 +244,20 @@ textarea {
 }
 #delete {
   background-color: red;
+}
+#username {
+  width: 250px;
+  height: 30px;
+}
+#email {
+  width: 250px;
+  height: 30px;
+}
+#password {
+  width: 250px;
+  height: 30px;
+}
+#password1 {
+  width: 250px;
+  height: 30px;
 }

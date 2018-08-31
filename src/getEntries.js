@@ -15,7 +15,7 @@ api
         <button class="titles" onClick="getSingle(event)" data-id="${entry.id}">
         <h3>${entry.title}</h3>
         </button>
-        </div><hr/>`;
+        </div>`;
       }
     }
   })

@@ -17,11 +17,19 @@ body {
 .container {
   width: 100%;
   clear: both;
+  font-size: larger;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .wrapper {
   display: table-cell;
   vertical-align: middle;
+  display: inline-block;
+  margin-left: 30%;
+  margin-right: 70%;
+  width: 400px;
+  height: 200px;
 }
 
 .button {
@@ -94,7 +102,7 @@ button {
 .form {
   background-color: white;
   position: absolute;
-  height: 500px;
+  height: 550px;
   width: 500px;
   top: 30%;
   left: 40%;
@@ -104,7 +112,6 @@ button {
 }
 
 form {
-  border: solid black;
   padding: 15px;
   font-size: 120%;
   color: black;
@@ -140,6 +147,7 @@ button.titles {
   background-color: rgb(24, 5, 24);
   text-align: left;
   border-radius: 10px;
+  margin: 5px;
 }
 button.titles:hover {
   background-color: rgb(36, 33, 37);
@@ -244,4 +252,20 @@ textarea {
 }
 #delete {
   background-color: red;
+}
+#username {
+  width: 250px;
+  height: 30px;
+}
+#email {
+  width: 250px;
+  height: 30px;
+}
+#password {
+  width: 250px;
+  height: 30px;
+}
+#password1 {
+  width: 250px;
+  height: 30px;
 }

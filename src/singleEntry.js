@@ -46,7 +46,7 @@ document.getElementById("delete").addEventListener("click", function(e) {
             icon: "success"
           });
           console.log(res);
-          window.location.href = "/getEntries.html";
+          window.location.href = "../getEntries.html";
         });
     } else {
       swal("Your entry is safe!");
